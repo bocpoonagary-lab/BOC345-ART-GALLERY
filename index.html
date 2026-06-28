@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch Campaigns & Events</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#0ea5e9', /* Neon Blue Accent */
+                        darkBg: '#09090b', /* Matte Black */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Cinematic hover and blur effects */
+        .gallery-container:hover .gallery-item:not(:hover) {
+            filter: brightness(0.4) blur(3px);
+            transform: scale(0.98);
+        }
+        
+        .gallery-item {
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+            z-index: 20;
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans antialiased selection:bg-brand selection:text-white min-h-screen">
+
+    <!-- Header Section -->
+    <header class="py-16 px-6 text-center border-b border-white/5 relative overflow-hidden">
+        <!-- Subtle background glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand/10 blur-[100px] pointer-events-none"></div>
+        
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight mb-4">
+                Branch <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-cyan-300">Campaigns</span>
+            </h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto text-sm md:text-base tracking-wide uppercase letter-spacing-2">
+                Promotions, Events & Programmes Showcase
+            </p>
+        </div>
+    </header>
+
+    <!-- Gallery Grid Section -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="gallery-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            
+            <!-- Item 1 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo1/400/500" alt="Promotion Campaign 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Campaign</span>
+                    <span class="text-sm font-semibold text-white">Q1 Promotion Drive</span>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo2/400/500" alt="Promotion Campaign 2" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Event</span>
+                    <span class="text-sm font-semibold text-white">Branch Open Day</span>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo3/400/500" alt="Promotion Campaign 3" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Programme</span>
+                    <span class="text-sm font-semibold text-white">Customer Awareness</span>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo4/400/500" alt="Promotion Campaign 4" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Campaign</span>
+                    <span class="text-sm font-semibold text-white">Digital Onboarding</span>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo5/400/500" alt="Promotion Campaign 5" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Event</span>
+                    <span class="text-sm font-semibold text-white">Community Outreach</span>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo6/400/500" alt="Promotion Campaign 6" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Campaign</span>
+                    <span class="text-sm font-semibold text-white">Festive Season Promo</span>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo7/400/500" alt="Promotion Campaign 7" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Programme</span>
+                    <span class="text-sm font-semibold text-white">Youth Savings Drive</span>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo8/400/500" alt="Promotion Campaign 8" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Event</span>
+                    <span class="text-sm font-semibold text-white">Branch Anniversary</span>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo9/400/500" alt="Promotion Campaign 9" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Campaign</span>
+                    <span class="text-sm font-semibold text-white">New Service Launch</span>
+                </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo10/400/500" alt="Promotion Campaign 10" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Programme</span>
+                    <span class="text-sm font-semibold text-white">Financial Literacy</span>
+                </div>
+            </div>
+
+            <!-- Item 11 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo11/400/500" alt="Promotion Campaign 11" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Event</span>
+                    <span class="text-sm font-semibold text-white">Staff Excellence Awards</span>
+                </div>
+            </div>
+
+            <!-- Item 12 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo12/400/500" alt="Promotion Campaign 12" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Campaign</span>
+                    <span class="text-sm font-semibold text-white">Mobile App Activation</span>
+                </div>
+            </div>
+
+            <!-- Item 13 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo13/400/500" alt="Promotion Campaign 13" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Programme</span>
+                    <span class="text-sm font-semibold text-white">Senior Citizen Drive</span>
+                </div>
+            </div>
+
+            <!-- Item 14 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo14/400/500" alt="Promotion Campaign 14" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Event</span>
+                    <span class="text-sm font-semibold text-white">Local Trade Fair</span>
+                </div>
+            </div>
+
+            <!-- Item 15 -->
+            <div class="gallery-item relative group rounded-xl overflow-hidden bg-zinc-900 aspect-[4/5] cursor-pointer">
+                <img src="https://picsum.photos/seed/promo15/400/500" alt="Promotion Campaign 15" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <span class="text-xs text-brand font-medium tracking-widest uppercase mb-1">Campaign</span>
+                    <span class="text-sm font-semibold text-white">Year-End Mega Promo</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center border-t border-white/5 mt-12">
+        <p class="text-zinc-600 text-sm">© 2026 Branch Campaigns & Events Showcase.</p>
+    </footer>
+
+</body>
+</html>
